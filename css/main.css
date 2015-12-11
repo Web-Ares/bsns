@@ -644,6 +644,9 @@ a:hover {
     width: 7px;
     border-bottom: 1px solid #000;
 }
+.content .site__pic{
+    padding-top: 10px;
+}
 /* --------------- /content --------------- */
 
 /* --------------- docs --------------- */
