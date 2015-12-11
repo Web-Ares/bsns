@@ -613,3 +613,41 @@ a:hover {
     color: #626262;
 }
 /* --------------- /breadcrumbs --------------- */
+
+/* --------------- contacts --------------- */
+.contacts{
+    font-style: normal;
+    margin-bottom: 15px;
+}
+.contacts>span{
+    display: block;
+    margin-bottom: 10px;
+}
+.contacts dt{
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 16px;
+}
+.contacts dd{
+    margin-bottom: 5px;
+}
+.contacts a{
+    color:#000;
+    text-decoration: underline;
+}
+.contacts a:hover{
+    text-decoration: none;
+}
+/* --------------- /contacts --------------- */
+
+/* --------------- map --------------- */
+.map {
+      height: 374px;
+      margin-bottom: 15px;
+  }
+.map1 {
+    height: 374px;
+    margin-bottom: 15px;
+}
+/* --------------- /map --------------- */

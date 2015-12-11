@@ -14,6 +14,44 @@ $(function(){
             autoplay: 5000
         });
     }
+    if ($('.map').length) {
+
+        var myMap;
+
+        function init () {
+            myMap = new ymaps.Map('map', {
+                center: $('.map').attr('data-coord').split(', '),
+                zoom: 12
+            });
+
+            myMap.controls
+                .add('zoomControl', { left: 5, top: 5 })
+                .add('typeSelector')
+                .add('mapTools', { left: 35, top: 5 });
+
+        }
+
+        ymaps.ready(init);
+    }
+    if ($('.map1').length) {
+
+        var myMap1;
+
+        function init1 () {
+            myMap1 = new ymaps.Map('map1', {
+                center: $('.map').attr('data-coord').split(', '),
+                zoom: 12
+            });
+
+            myMap1.controls
+                .add('zoomControl', { left: 5, top: 5 })
+                .add('typeSelector')
+                .add('mapTools', { left: 35, top: 5 });
+
+        }
+
+        ymaps.ready(init1);
+    }
 
     $(".site__header-call").on({
         'click': function(){
