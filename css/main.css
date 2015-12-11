@@ -15,6 +15,8 @@
 
     footer
 
+    docs
+
 */
 
 /* --------------- Style to null --------------- */
@@ -613,3 +615,21 @@ a:hover {
     color: #626262;
 }
 /* --------------- /breadcrumbs --------------- */
+
+/* --------------- docs --------------- */
+.docs{
+    padding-top: 8px;
+}
+.docs a{
+    display: inline-block;
+    margin-left: 31px;
+    margin-bottom: 36px;
+}
+.docs a:first-child,
+.docs a:nth-child(3n+1){
+    margin-left: 0;
+}
+.docs img{
+    display: block;
+}
+/* --------------- /docs --------------- */

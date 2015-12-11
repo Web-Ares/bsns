@@ -45,4 +45,15 @@ $(function(){
         }
     });
 
+    $('.docs').each(function () {
+        $(".fancybox").fancybox({
+            padding : 0,
+            helpers: {
+                overlay: {
+                    locked: false
+                }
+            }
+        });
+    });
+
 } );
