@@ -14,6 +14,7 @@ $(function(){
             autoplay: 5000
         });
     }
+
     if ($('.map').length) {
 
         var myMap;
@@ -23,11 +24,21 @@ $(function(){
                 center: $('.map').attr('data-coord').split(', '),
                 zoom: 12
             });
+            $.each($('.map'), function(i){
+                var curElem = $(this);
 
-            myMap.controls
-                .add('zoomControl', { left: 5, top: 5 })
-                .add('typeSelector')
-                .add('mapTools', { left: 35, top: 5 });
+                if (curElem.attr('data-coord')) {
+                    var coord = curElem.attr('data-coord').split(', ');
+
+                    myMap.geoObjects.add(new ymaps.Placemark(
+                        [coord[0], coord[1]],
+                        {   hintContent: "Описание",
+                            balloonContentBody: curElem.find('span').text() }, {
+                            iconLayout: 'default#image'
+                        }
+                    ));
+                }
+            });
 
         }
 
@@ -37,20 +48,29 @@ $(function(){
 
         var myMap1;
 
-        function init1 () {
+        function _init () {
             myMap1 = new ymaps.Map('map1', {
-                center: $('.map').attr('data-coord').split(', '),
+                center: $('.map1').attr('data-coord').split(', '),
                 zoom: 12
             });
+            $.each($('.map1'), function(j){
+                var curElem = $(this);
 
-            myMap1.controls
-                .add('zoomControl', { left: 5, top: 5 })
-                .add('typeSelector')
-                .add('mapTools', { left: 35, top: 5 });
+                if (curElem.attr('data-coord')) {
+                    var coord = curElem.attr('data-coord').split(', ');
 
+                    myMap1.geoObjects.add(new ymaps.Placemark(
+                        [coord[0], coord[1]],
+                        {   hintContent: "Описание",
+                            balloonContentBody: curElem.find('span').text() }, {
+                            iconLayout: 'default#image'
+                        }
+                    ));
+                }
+            });
         }
 
-        ymaps.ready(init1);
+        ymaps.ready(_init);
     }
 
     $(".site__header-call").on({
@@ -81,6 +101,17 @@ $(function(){
             }
 
         }
+    });
+
+    $('.docs').each(function () {
+        $(".fancybox").fancybox({
+            padding : 0,
+            helpers: {
+                overlay: {
+                    locked: false
+                }
+            }
+        });
     });
 
 } );
