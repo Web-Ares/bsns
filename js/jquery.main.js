@@ -15,6 +15,64 @@ $(function(){
         });
     }
 
+    if ($('.map').length) {
+
+        var myMap;
+
+        function init () {
+            myMap = new ymaps.Map('map', {
+                center: $('.map').attr('data-coord').split(', '),
+                zoom: 12
+            });
+            $.each($('.map'), function(i){
+                var curElem = $(this);
+
+                if (curElem.attr('data-coord')) {
+                    var coord = curElem.attr('data-coord').split(', ');
+
+                    myMap.geoObjects.add(new ymaps.Placemark(
+                        [coord[0], coord[1]],
+                        {   hintContent: "Описание",
+                            balloonContentBody: curElem.find('span').text() }, {
+                            iconLayout: 'default#image'
+                        }
+                    ));
+                }
+            });
+
+        }
+
+        ymaps.ready(init);
+    }
+    if ($('.map1').length) {
+
+        var myMap1;
+
+        function _init () {
+            myMap1 = new ymaps.Map('map1', {
+                center: $('.map1').attr('data-coord').split(', '),
+                zoom: 12
+            });
+            $.each($('.map1'), function(j){
+                var curElem = $(this);
+
+                if (curElem.attr('data-coord')) {
+                    var coord = curElem.attr('data-coord').split(', ');
+
+                    myMap1.geoObjects.add(new ymaps.Placemark(
+                        [coord[0], coord[1]],
+                        {   hintContent: "Описание",
+                            balloonContentBody: curElem.find('span').text() }, {
+                            iconLayout: 'default#image'
+                        }
+                    ));
+                }
+            });
+        }
+
+        ymaps.ready(_init);
+    }
+
     $(".site__header-call").on({
         'click': function(){
             var curElem = $('.popup');

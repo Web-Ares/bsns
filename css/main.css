@@ -622,6 +622,50 @@ a:hover {
 }
 /* --------------- /breadcrumbs --------------- */
 
+/* --------------- contacts --------------- */
+.contacts{
+    font-style: normal;
+    margin-bottom: 21px;
+    margin-top: 25px;
+}
+.contacts>span{
+    display: block;
+    margin-bottom: 16px;
+}
+.contacts dt{
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 7px;
+    margin-top: 16px;
+}
+.contacts dd{
+    margin-bottom: 5px;
+}
+.contacts a{
+    color:#000;
+    text-decoration: underline;
+}
+.contacts a:hover{
+    text-decoration: none;
+}
+/* --------------- /contacts --------------- */
+
+/* --------------- map --------------- */
+.map {
+    width: 711px;
+    height: 370px;
+  }
+.map1 {
+    width: 711px;
+    height: 370px;
+    margin-bottom: 19px;
+}
+.map span,
+.map1 span{
+    display: none;
+}
+/* --------------- /map --------------- */
+
 /* --------------- content --------------- */
 .content{
     padding-right: 20px;
@@ -666,3 +710,4 @@ a:hover {
     display: block;
 }
 /* --------------- /docs --------------- */
+
