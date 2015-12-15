@@ -701,6 +701,48 @@ a:hover {
 .content .site__pic{
     padding-top: 10px;
 }
+.content .site__pic:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+}
+.content table{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.content td{
+    padding: 3px 5px;
+}
+.content thead td{
+    font-weight: 600;
+    background-color: #9bb5a6;
+    vertical-align: middle;
+}
+table.product thead td{
+    border: 1px solid #d4eadb;
+    border-bottom: none;
+}
+table.product thead tr:first-child td{
+    border-top: none;
+}
+.content tbody th{
+    padding: 5px;
+    background-color: #d4eadb;
+}
+.content tbody td{
+    border: 1px solid #d4eadb;
+}
+.content tbody tr:first-child td{
+    border-top: none;
+}
+.content tbody td p{
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.content tbody .content__nowrap p{
+    white-space: nowrap;
+}
 /* --------------- /content --------------- */
 
 /* --------------- docs --------------- */
