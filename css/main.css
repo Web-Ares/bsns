@@ -13,7 +13,17 @@
 
     logo
 
-    footer
+    menu
+
+    swiper
+
+    popup
+
+    line-ban
+
+    breadcrumbs
+
+    content
 
     docs
 
@@ -687,21 +697,21 @@ a:hover {
 }
 /* --------------- /map --------------- */
 
-/* --------------- content --------------- */
-.content{
+/* --------------- content-wrap --------------- */
+.content-wrap{
     padding-right: 20px;
     line-height: 18px;
 }
-.content p{
+.content-wrap p{
     margin-right: 20px;
     margin-bottom: 10px;
 }
-.content li{
+.content-wrap li{
     position: relative;
     margin-bottom: 10px;
     padding-left: 21px;
 }
-.content li:before{
+.content-wrap li:before{
     content: " ";
     position: absolute;
     top: 8px;
@@ -709,18 +719,62 @@ a:hover {
     width: 7px;
     border-bottom: 1px solid #000;
 }
-.content .site__pic{
+.content-wrap .site__pic{
     padding-top: 10px;
 }
-/* --------------- /content --------------- */
+.content-wrap .site__pic:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+}
+.content-wrap table{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.content-wrap td{
+    padding: 3px 5px;
+}
+.content-wrap thead td{
+    font-weight: 600;
+    background-color: #9bb5a6;
+    vertical-align: middle;
+}
+table.product thead td{
+    border: 1px solid #d4eadb;
+    border-bottom: none;
+}
+table.product thead tr:first-child td{
+    border-top: none;
+}
+.content-wrap tbody th{
+    padding: 5px;
+    background-color: #d4eadb;
+}
+.content-wrap tbody td{
+    border: 1px solid #d4eadb;
+}
+.content-wrap tbody tr:first-child td{
+    border-top: none;
+}
+.content-wrap tbody td p{
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.content-wrap tbody .content__nowrap p{
+    white-space: nowrap;
+}
+/* --------------- /content-wrap --------------- */
 
 /* --------------- docs --------------- */
 .docs{
     padding-top: 8px;
+    overflow: hidden;
 }
 .docs a{
-    display: inline-block;
-    margin-left: 31px;
+    float: left;
+    width: 30%;
+    margin-left: 4%;
     margin-bottom: 36px;
 }
 .docs a:first-child,
@@ -729,6 +783,7 @@ a:hover {
 }
 .docs img{
     display: block;
+    width: 100%;
 }
 /* --------------- /docs --------------- */
 
