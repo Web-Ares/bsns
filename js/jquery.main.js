@@ -15,14 +15,14 @@ $(function(){
         });
     }
 
-    if ($('.map').length) {
+    $('.map').each(function ()  {
 
         var myMap;
 
         function init () {
             myMap = new ymaps.Map('map', {
                 center: $('.map').attr('data-coord').split(', '),
-                zoom: 12
+                zoom: 13
             });
             $.each($('.map'), function(i){
                 var curElem = $(this);
@@ -43,7 +43,8 @@ $(function(){
         }
 
         ymaps.ready(init);
-    }
+    });
+
     if ($('.map1').length) {
 
         var myMap1;
@@ -51,7 +52,7 @@ $(function(){
         function _init () {
             myMap1 = new ymaps.Map('map1', {
                 center: $('.map1').attr('data-coord').split(', '),
-                zoom: 12
+                zoom: 13
             });
             $.each($('.map1'), function(j){
                 var curElem = $(this);
