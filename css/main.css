@@ -624,25 +624,22 @@ a:hover {
     cursor: pointer;
     padding-left: 6px;
 }
-.breadcrumbs a:before{
+.breadcrumbs span{
+    color: #626262;
+    padding-left: 6px;
+}
+.breadcrumbs a:after{
     content: '>';
     position: absolute;
     top: 2px;
-    left: -10px;
+    right: -15px;
     color: #626262;
-}
-.breadcrumbs a:last-child{
-    text-decoration: none;
-    cursor: default;
 }
 .breadcrumbs a:last-child:hover{
     color: #626262;
 }
 .breadcrumbs a:first-child {
    padding-left: 0;
-}
-.breadcrumbs a:first-child:before{
-    display: none;
 }
 .breadcrumbs a:hover{
     text-decoration: none;
