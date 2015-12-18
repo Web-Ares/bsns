@@ -610,12 +610,13 @@ a:hover {
 
 /* --------------- breadcrumbs --------------- */
 .breadcrumbs {
-    margin: 1px 0;
-    margin-bottom: 13px;
+    margin: 1px 0 13px -6px;
     position: relative;
 }
 .breadcrumbs a{
     position: relative;
+    display: inline-block;
+    line-height: 15px;
     margin-top: 3px;
     font-size: 12px;
     color: #626262;
@@ -631,15 +632,12 @@ a:hover {
 .breadcrumbs a:after{
     content: '>';
     position: absolute;
-    top: 2px;
+    top: 0;
     right: -15px;
     color: #626262;
 }
 .breadcrumbs a:last-child:hover{
     color: #626262;
-}
-.breadcrumbs a:first-child {
-   padding-left: 0;
 }
 .breadcrumbs a:hover{
     text-decoration: none;
